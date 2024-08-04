@@ -1,7 +1,15 @@
 import { View, Text, TextInput, StyleSheet } from "react-native";
 import React from "react";
 
-const LogInput = ({ title }) => {
+const LogInput = ({
+  title,
+  textContentType,
+  keyboardType,
+  autoCompleteType,
+  autoCapitalize,
+  autoCorrect,
+  secureTextEntry,
+}) => {
   return (
     <View
       style={{
@@ -11,7 +19,15 @@ const LogInput = ({ title }) => {
       }}
     >
       <Text style={{ color: "#24786D", fontWeight: 500 }}>{title}</Text>
-      <TextInput style={styles.Input} />
+      <TextInput
+        textContentType={textContentType}
+        keyboardType={keyboardType}
+        autoCompleteType={autoCompleteType}
+        autoCapitalize={autoCapitalize}
+        autoCorrect={autoCorrect}
+        secureTextEntry={secureTextEntry}
+        style={styles.Input}
+      />
     </View>
   );
 };
@@ -21,7 +37,7 @@ export default LogInput;
 const styles = StyleSheet.create({
   Input: {
     fontSize: 16,
-    color: "#FFFFFF",
+    color: "#000000",
     marginBottom: 12,
     width: "100%",
   },

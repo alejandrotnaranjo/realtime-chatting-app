@@ -27,8 +27,14 @@ export default function LoginScreen() {
       </View>
       <Separator />
       <View style={{ width: "100%", gap: 30, paddingHorizontal: "6%" }}>
-        <LogInput title="Your email" />
-        <LogInput title="Your password" />
+        <LogInput
+          keyboardType="email-address"
+          autoCapitalize="none"
+          autoCorrect={false}
+          autoCompleteType="email"
+          title="Your email"
+        />
+        <LogInput secureTextEntry={true} title="Your password" />
       </View>
       <View
         style={{
